@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SimpleTally.gd" type="Script" id=1]
+
+[node name="Tally" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Increase" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 184.0
+margin_bottom = 48.0
+text = "Increase"
+
+[node name="Decrease" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 96.0
+margin_right = 184.0
+margin_bottom = 132.0
+text = "Decrease"
+
+[node name="Screen" type="LineEdit" parent="."]
+margin_left = 16.0
+margin_top = 56.0
+margin_right = 184.0
+margin_bottom = 88.0
+text = "0"
+align = 1
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+
+[connection signal="button_up" from="Increase" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Decrease" to="." method="_on_Button2_button_up"]
